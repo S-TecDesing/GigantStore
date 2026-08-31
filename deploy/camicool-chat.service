@@ -1,0 +1,17 @@
+[Unit]
+Description=CamiCool Chatbot (Flask + Gunicorn)
+After=network.target
+
+[Service]
+Type=simple
+# Ajusta esta ruta si tu proyecto quedó clonado en otra carpeta del servidor
+WorkingDirectory=/var/www/camicool/py
+EnvironmentFile=/var/www/camicool/py/.env
+ExecStart=/var/www/camicool/py/venv/bin/gunicorn --workers 2 --bind 127.0.0.1:5000 app:app
+Restart=always
+RestartSec=5
+User=www-data
+Group=www-data
+
+[Install]
+WantedBy=multi-user.target

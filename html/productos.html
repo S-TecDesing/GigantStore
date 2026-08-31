@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Mundial Camisetas</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="../css/productos.css">
+</head>
+<body>
+
+    <!-- Header / Barra de Navegación -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="#inicio">⚽ Gigantes<span>Store</span></a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#inicio">Inicio</a></li>
+                <li><a href="index.html#nosotros">Quiénes Somos</a></li>
+                <li><a href="productos.html">Catálogo</a></li>
+                <li><a href="index.html#envios">Envíos & Experiencias</a></li>
+                <li><a href="carrito.html">Finalizar en CamiCool</a></li>
+                <li>
+                    <a href="https://wa.me/573001234567?text=Hola,%20deseo%20más%20información%20sobre%20las%20camisetas" target="_blank" class="btn-whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i> Contacto
+                    </a>
+                </li>
+                <li>
+                    <button class="cart-icon-btn" onclick="openCart()" aria-label="Abrir carrito de compras">
+                        🛒
+                        <span class="cart-badge" id="cartBadge">0</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+<section id="productos">
+
+<div class="section-header">
+    <h2 class="title-section">CAMISETA DE LAS SELECCIONES CAMPEONAS DEL MUNDO</h2>
+
+    <div class="filter-bar">
+        <select class="filter-select" onchange="filterProducts(this.value)">
+            <option value="todas">Todas las camisetas</option>
+            <option value="mundial">Ganadoras de Mundial</option>
+            <option value="copa">Ganadoras de Copa América</option>
+            <option value="eurocopa">Ganadoras de Eurocopa</option>
+            <option value="ninguno">Sin títulos (relevantes)</option>
+        </select>
+        <button class="az-toggle" onclick="toggleAlphabetical(this)">A-Z Alfabético</button>
+    </div>
+</div>
+
+<div class="products-grid" id="productsGrid">
+
+<!-- BRASIL -->
+<div class="product-row brasil" data-categories="mundial copa" data-name="Brasil">
+    <div class="bg"></div>
+    <div class="left">
+        <span class="rank">1° 🏆</span>
+        <h3>BRASIL</h3>
+        <p class="sub">5 TÍTULOS MUNDIALES</p>
+        <p class="desc">La Canarinha, magia, jogo bonito y el máximo referente del fútbol mundial.</p>
+        <p class="tech-note">🧵 <strong>Tecnología Aeroready:</strong> Tejido ultra ligero que absorbe el sudor al instante.</p>
+    </div>
+    <div class="center">
+        <div class="shirt-container">
+            <img class="shirt-img front-view active" src="../img/productos/brasil-frente.png" alt="Camiseta Brasil Frente" loading="lazy">
+            <img class="shirt-img back-view" src="../img/productos/brasil-atras.png" alt="Camiseta Brasil Espalda" loading="lazy">
+        </div>
+        <div class="view-controls">
+            <button class="view-btn active" onclick="changeView(this, 'front')">FRENTE</button>
+            <button class="view-btn" onclick="changeView(this, 'back')">ESPALDA</button>
+        </div>
+        <div class="fabric">
+            <div class="circle"></div>
+            <p>TELA PREMIUM<br><small>100% poliéster transpirable</small></p>
+        </div>
+    </div>
+    <div class="right">
+        <div class="discount">-30%</div>
+        <p class="old">$85.000</p>
+        <p class="price">$59.500 <span>COP</span></p>
+        <div class="sizes">
+            <button onclick="size(this,'S')">S</button>
+            <button onclick="size(this,'M')">M</button>
+            <button onclick="size(this,'L')">L</button>
+            <button onclick="size(this,'XL')">XL</button>
+        </div>
+        <p class="measure">S: 50cm x 70cm</p>
+        <div class="qty-select">
+            <span>Cantidad:</span>
+            <button onclick="changeQty(this,-1)">−</button>
+            <span class="qty-value">1</span>
+            <button onclick="changeQty(this,1)">+</button>
+        </div>
+        <button class="buy" onclick="addToCart(this)">AGREGAR AL CARRITO</button>
+
+        <div class="wa-bubble">
+            <span class="wa-tip">Personalizar por WhatsApp</span>
+            <a href="https://wa.me/573000000000?text=Hola,%20quiero%20personalizar%20la%20camiseta%20de%20Brasil" target="_blank" class="wa-btn" aria-label="Personalizar por WhatsApp">
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.5.7 4.8 1.9 6.8L3 29l6.9-2.1c1.9 1.1 4.1 1.7 6.4 1.7 7 0 12.7-5.6 12.7-12.5S23.3 3 16.3 3h-.3zm7.6 17.8c-.3.9-1.7 1.7-2.4 1.8-.6.1-1.4.1-2.2-.1-.5-.2-1.2-.4-2-.8-3.5-1.5-5.8-5-6-5.3-.2-.3-1.4-1.9-1.4-3.6s.9-2.6 1.2-3c.3-.3.7-.4 1-.4h.7c.2 0 .5 0 .8.6.3.7 1 2.4 1.1 2.6.1.2.2.4 0 .7-.1.3-.2.4-.4.6-.2.2-.4.5-.6.7-.2.2-.4.4-.2.8.2.4 1 1.6 2.1 2.6 1.4 1.3 2.6 1.7 3 1.9.4.2.6.1.8-.1.2-.2.9-1 1.1-1.4.2-.4.5-.3.8-.2.3.1 2 1 2.4 1.2.4.2.6.3.7.4.1.2.1 1-.2 1.9z"/></svg>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ALEMANIA -->
+<div class="product-row alemania" data-categories="mundial eurocopa" data-name="Alemania">
+    <div class="bg"></div>
+    <div class="left">
+        <span class="rank">2° 🏆</span>
+        <h3>ALEMANIA</h3>
+        <p class="sub">4 TÍTULOS MUNDIALES</p>
+        <p class="desc">Disciplina táctica, jerarquía inquebrantable y mentalidad ganadora histórica.</p>
+        <p class="tech-note">🧵 <strong>Tecnología Heat.RDY:</strong> Mantiene la frescura en los momentos de máxima exigencia.</p>
+    </div>
+    <div class="center">
+        <div class="shirt-container">
+            <img class="shirt-img front-view active" src="../img/productos/alemania-frente.png" alt="Camiseta Alemania Frente" loading="lazy">
+            <img class="shirt-img back-view" src="../img/productos/alemania-atras.png" alt="Camiseta Alemania Espalda" loading="lazy">
+        </div>
+        <div class="view-controls">
+            <button class="view-btn active" onclick="changeView(this, 'front')">FRENTE</button>
+            <button class="view-btn" onclick="changeView(this, 'back')">ESPALDA</button>
+        </div>
+        <div class="fabric">
+            <div class="circle"></div>
+            <p>TELA PREMIUM<br><small>Secado rápido profesional</small></p>
+        </div>
+    </div>
+    <div class="right">
+        <div class="discount">-30%</div>
+        <p class="old">$85.000</p>
+        <p class="price">$59.500 <span>COP</span></p>
+        <div class="sizes">
+            <button onclick="size(this,'S')">S</button>
+            <button onclick="size(this,'M')">M</button>
+            <button onclick="size(this,'L')">L</button>
+            <button onclick="size(this,'XL')">XL</button>
+        </div>
+        <p class="measure">S: 50cm x 70cm</p>
+        <div class="qty-select">
+            <span>Cantidad:</span>
+            <button onclick="changeQty(this,-1)">−</button>
+            <span class="qty-value">1</span>
+            <button onclick="changeQty(this,1)">+</button>
+        </div>
+        <button class="buy" onclick="addToCart(this)">AGREGAR AL CARRITO</button>
+
+        <div class="wa-bubble">
+            <span class="wa-tip">Personalizar por WhatsApp</span>
+            <a href="https://wa.me/573000000000?text=Hola,%20quiero%20personalizar%20la%20camiseta%20de%20Alemania" target="_blank" class="wa-btn" aria-label="Personalizar por WhatsApp">
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.5.7 4.8 1.9 6.8L3 29l6.9-2.1c1.9 1.1 4.1 1.7 6.4 1.7 7 0 12.7-5.6 12.7-12.5S23.3 3 16.3 3h-.3zm7.6 17.8c-.3.9-1.7 1.7-2.4 1.8-.6.1-1.4.1-2.2-.1-.5-.2-1.2-.4-2-.8-3.5-1.5-5.8-5-6-5.3-.2-.3-1.4-1.9-1.4-3.6s.9-2.6 1.2-3c.3-.3.7-.4 1-.4h.7c.2 0 .5 0 .8.6.3.7 1 2.4 1.1 2.6.1.2.2.4 0 .7-.1.3-.2.4-.4.6-.2.2-.4.5-.6.7-.2.2-.4.4-.2.8.2.4 1 1.6 2.1 2.6 1.4 1.3 2.6 1.7 3 1.9.4.2.6.1.8-.1.2-.2.9-1 1.1-1.4.2-.4.5-.3.8-.2.3.1 2 1 2.4 1.2.4.2.6.3.7.4.1.2.1 1-.2 1.9z"/></svg>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ITALIA -->
+<div class="product-row italia" data-categories="mundial eurocopa" data-name="Italia">
+    <div class="bg"></div>
+    <div class="left">
+        <span class="rank">3° 🏆</span>
+        <h3>ITALIA</h3>
+        <p class="sub">4 TÍTULOS MUNDIALES</p>
+        <p class="desc">La Squadra Azzurra, elegancia defensiva y orgullo competitivo.</p>
+        <p class="tech-note">🧵 <strong>Tecnología DryCell:</strong> Expulsa el sudor de la piel para mayor comodidad.</p>
+    </div>
+    <div class="center">
+        <div class="shirt-container">
+            <img class="shirt-img front-view active" src="../img/productos/italia-frente.png" alt="Camiseta Italia Frente" loading="lazy">
+            <img class="shirt-img back-view" src="../img/productos/italia-atras.png" alt="Camiseta Italia Espalda" loading="lazy">
+        </div>
+        <div class="view-controls">
+            <button class="view-btn active" onclick="changeView(this, 'front')">FRENTE</button>
+            <button class="view-btn" onclick="changeView(this, 'back')">ESPALDA</button>
+        </div>
+        <div class="fabric">
+            <div class="circle blue"></div>
+            <p>TELA PREMIUM<br><small>100% poliéster transpirable</small></p>
+        </div>
+    </div>
+    <div class="right">
+        <div class="discount">-30%</div>
+        <p class="old">$85.000</p>
+        <p class="price">$59.500 <span>COP</span></p>
+        <div class="sizes">
+            <button onclick="size(this,'S')">S</button>
+            <button onclick="size(this,'M')">M</button>
+            <button onclick="size(this,'L')">L</button>
+            <button onclick="size(this,'XL')">XL</button>
+        </div>
+        <p class="measure">S: 50cm x 70cm</p>
+        <div class="qty-select">
+            <span>Cantidad:</span>
+            <button onclick="changeQty(this,-1)">−</button>
+            <span class="qty-value">1</span>
+            <button onclick="changeQty(this,1)">+</button>
+        </div>
+        <button class="buy" onclick="addToCart(this)">AGREGAR AL CARRITO</button>
+
+        <div class="wa-bubble">
+            <span class="wa-tip">Personalizar por WhatsApp</span>
+            <a href="https://wa.me/573000000000?text=Hola,%20quiero%20personalizar%20la%20camiseta%20de%20Italia" target="_blank" class="wa-btn" aria-label="Personalizar por WhatsApp">
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.5.7 4.8 1.9 6.8L3 29l6.9-2.1c1.9 1.1 4.1 1.7 6.4 1.7 7 0 12.7-5.6 12.7-12.5S23.3 3 16.3 3h-.3zm7.6 17.8c-.3.9-1.7 1.7-2.4 1.8-.6.1-1.4.1-2.2-.1-.5-.2-1.2-.4-2-.8-3.5-1.5-5.8-5-6-5.3-.2-.3-1.4-1.9-1.4-3.6s.9-2.6 1.2-3c.3-.3.7-.4 1-.4h.7c.2 0 .5 0 .8.6.3.7 1 2.4 1.1 2.6.1.2.2.4 0 .7-.1.3-.2.4-.4.6-.2.2-.4.5-.6.7-.2.2-.4.4-.2.8.2.4 1 1.6 2.1 2.6 1.4 1.3 2.6 1.7 3 1.9.4.2.6.1.8-.1.2-.2.9-1 1.1-1.4.2-.4.5-.3.8-.2.3.1 2 1 2.4 1.2.4.2.6.3.7.4.1.2.1 1-.2 1.9z"/></svg>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ARGENTINA -->
+<div class="product-row argentina" data-categories="mundial copa" data-name="Argentina">
+    <div class="bg"></div>
+    <div class="left">
+        <span class="rank">4° 🏆</span>
+        <h3>ARGENTINA</h3>
+        <p class="sub">3 TÍTULOS MUNDIALES</p>
+        <p class="desc">Pasión albiceleste, talento puro y gloria eterna en el firmamento futbolístico.</p>
+        <p class="tech-note">🧵 <strong>Tecnología Aeroready:</strong> Tejido transpirable de alto rendimiento.</p>
+    </div>
+    <div class="center">
+        <div class="shirt-container">
+            <img class="shirt-img front-view active" src="../img/productos/argentina-frente.png" alt="Camiseta Argentina Frente" loading="lazy">
+            <img class="shirt-img back-view" src="../img/productos/argentina-atras.png" alt="Camiseta Argentina Espalda" loading="lazy">
+        </div>
+        <div class="view-controls">
+            <button class="view-btn active" onclick="changeView(this, 'front')">FRENTE</button>
+            <button class="view-btn" onclick="changeView(this, 'back')">ESPALDA</button>
+        </div>
+        <div class="fabric">
+            <div class="circle blue"></div>
+            <p>TELA PREMIUM<br><small>Secado rápido</small></p>
+        </div>
+    </div>
+    <div class="right">
+        <div class="discount">-30%</div>
+        <p class="old">$85.000</p>
+        <p class="price">$59.500 <span>COP</span></p>
+        <div class="sizes">
+            <button onclick="size(this,'S')">S</button>
+            <button onclick="size(this,'M')">M</button>
+            <button onclick="size(this,'L')">L</button>
+            <button onclick="size(this,'XL')">XL</button>
+        </div>
+        <p class="measure">S: 50cm x 70cm</p>
+        <div class="qty-select">
+            <span>Cantidad:</span>
+            <button onclick="changeQty(this,-1)">−</button>
+            <span class="qty-value">1</span>
+            <button onclick="changeQty(this,1)">+</button>
+        </div>
+        <button class="buy" onclick="addToCart(this)">AGREGAR AL CARRITO</button>
+
+        <div class="wa-bubble">
+            <span class="wa-tip">Personalizar por WhatsApp</span>
+            <a href="https://wa.me/573000000000?text=Hola,%20quiero%20personalizar%20la%20camiseta%20de%20Argentina" target="_blank" class="wa-btn" aria-label="Personalizar por WhatsApp">
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.5.7 4.8 1.9 6.8L3 29l6.9-2.1c1.9 1.1 4.1 1.7 6.4 1.7 7 0 12.7-5.6 12.7-12.5S23.3 3 16.3 3h-.3zm7.6 17.8c-.3.9-1.7 1.7-2.4 1.8-.6.1-1.4.1-2.2-.1-.5-.2-1.2-.4-2-.8-3.5-1.5-5.8-5-6-5.3-.2-.3-1.4-1.9-1.4-3.6s.9-2.6 1.2-3c.3-.3.7-.4 1-.4h.7c.2 0 .5 0 .8.6.3.7 1 2.4 1.1 2.6.1.2.2.4 0 .7-.1.3-.2.4-.4.6-.2.2-.4.5-.6.7-.2.2-.4.4-.2.8.2.4 1 1.6 2.1 2.6 1.4 1.3 2.6 1.7 3 1.9.4.2.6.1.8-.1.2-.2.9-1 1.1-1.4.2-.4.5-.3.8-.2.3.1 2 1 2.4 1.2.4.2.6.3.7.4.1.2.1 1-.2 1.9z"/></svg>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- FRANCIA -->
+<div class="product-row francia" data-categories="mundial eurocopa" data-name="Francia">
+    <div class="bg"></div>
+    <div class="left">
+        <span class="rank">5° 🏆</span>
+        <h3>FRANCIA</h3>
+        <p class="sub">2 TÍTULOS MUNDIALES</p>
+        <p class="desc">Los Bleus, potencia atlética, modernidad y talento desbordante.</p>
+        <p class="tech-note">🧵 <strong>Tecnología Dri-FIT ADV:</strong> Combina tejido antihumedad con ingeniería avanzada.</p>
+    </div>
+    <div class="center">
+        <div class="shirt-container">
+            <img class="shirt-img front-view active" src="../img/productos/francia-frente.png" alt="Camiseta Francia Frente" loading="lazy">
+            <img class="shirt-img back-view" src="../img/productos/francia-atras.png" alt="Camiseta Francia Espalda" loading="lazy">
+        </div>
+        <div class="view-controls">
+            <button class="view-btn active" onclick="changeView(this, 'front')">FRENTE</button>
+            <button class="view-btn" onclick="changeView(this, 'back')">ESPALDA</button>
+        </div>
+        <div class="fabric">
+            <div class="circle blue"></div>
+            <p>TELA PREMIUM<br><small>100% poliéster transpirable</small></p>
+        </div>
+    </div>
+    <div class="right">
+        <div class="discount">-30%</div>
+        <p class="old">$85.000</p>
+        <p class="price">$59.500 <span>COP</span></p>
+        <div class="sizes">
+            <button onclick="size(this,'S')">S</button>
+            <button onclick="size(this,'M')">M</button>
+            <button onclick="size(this,'L')">L</button>
+            <button onclick="size(this,'XL')">XL</button>
+        </div>
+        <p class="measure">S: 50cm x 70cm</p>
+        <div class="qty-select">
+            <span>Cantidad:</span>
+            <button onclick="changeQty(this,-1)">−</button>
+            <span class="qty-value">1</span>
+            <button onclick="changeQty(this,1)">+</button>
+        </div>
+        <button class="buy" onclick="addToCart(this)">AGREGAR AL CARRITO</button>
+
+        <div class="wa-bubble">
+            <span class="wa-tip">Personalizar por WhatsApp</span>
+            <a href="https://wa.me/573000000000?text=Hola,%20quiero%20personalizar%20la%20camiseta%20de%20Francia" target="_blank" class="wa-btn" aria-label="Personalizar por WhatsApp">
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.5.7 4.8 1.9 6.8L3 29l6.9-2.1c1.9 1.1 4.1 1.7 6.4 1.7 7 0 12.7-5.6 12.7-12.5S23.3 3 16.3 3h-.3zm7.6 17.8c-.3.9-1.7 1.7-2.4 1.8-.6.1-1.4.1-2.2-.1-.5-.2-1.2-.4-2-.8-3.5-1.5-5.8-5-6-5.3-.2-.3-1.4-1.9-1.4-3.6s.9-2.6 1.2-3c.3-.3.7-.4 1-.4h.7c.2 0 .5 0 .8.6.3.7 1 2.4 1.1 2.6.1.2.2.4 0 .7-.1.3-.2.4-.4.6-.2.2-.4.5-.6.7-.2.2-.4.4-.2.8.2.4 1 1.6 2.1 2.6 1.4 1.3 2.6 1.7 3 1.9.4.2.6.1.8-.1.2-.2.9-1 1.1-1.4.2-.4.5-.3.8-.2.3.1 2 1 2.4 1.2.4.2.6.3.7.4.1.2.1 1-.2 1.9z"/></svg>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- URUGUAY -->
+<div class="product-row uruguay" data-categories="mundial copa" data-name="Uruguay">
+    <div class="bg"></div>
+    <div class="left">
+        <span class="rank">6° 🏆</span>
+        <h3>URUGUAY</h3>
+        <p class="sub">2 TÍTULOS MUNDIALES</p>
+        <p class="desc">La garra charrúa, pioneros y leyenda viviente de las copas del mundo.</p>
+        <p class="tech-note">🧵 <strong>Tecnología Ultraweave:</strong> Tejido ultraligero diseñado para velocidad y confort.</p>
+    </div>
+    <div class="center">
+        <div class="shirt-container">
+            <img class="shirt-img front-view active" src="../img/productos/uruguay-frente.png" alt="Camiseta Uruguay Frente" loading="lazy">
+            <img class="shirt-img back-view" src="../img/productos/uruguay-atras.png" alt="Camiseta Uruguay Espalda" loading="lazy">
+        </div>
+        <div class="view-controls">
+            <button class="view-btn active" onclick="changeView(this, 'front')">FRENTE</button>
+            <button class="view-btn" onclick="changeView(this, 'back')">ESPALDA</button>
+        </div>
+        <div class="fabric">
+            <div class="circle blue"></div>
+            <p>TELA PREMIUM<br><small>Secado rápido</small></p>
+        </div>
+    </div>
+    <div class="right">
+        <div class="discount">-30%</div>
+        <p class="old">$85.000</p>
+        <p class="price">$59.500 <span>COP</span></p>
+        <div class="sizes">
+            <button onclick="size(this,'S')">S</button>
+            <button onclick="size(this,'M')">M</button>
+            <button onclick="size(this,'L')">L</button>
+            <button onclick="size(this,'XL')">XL</button>
+        </div>
+        <p class="measure">S: 50cm x 70cm</p>
+        <div class="qty-select">
+            <span>Cantidad:</span>
+            <button onclick="changeQty(this,-1)">−</button>
+            <span class="qty-value">1</span>
+            <button onclick="changeQty(this,1)">+</button>
+        </div>
+        <button class="buy" onclick="addToCart(this)">AGREGAR AL CARRITO</button>
+
+        <div class="wa-bubble">
+            <span class="wa-tip">Personalizar por WhatsApp</span>
+            <a href="https://wa.me/573000000000?text=Hola,%20quiero%20personalizar%20la%20camiseta%20de%20Uruguay" target="_blank" class="wa-btn" aria-label="Personalizar por WhatsApp">
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.5.7 4.8 1.9 6.8L3 29l6.9-2.1c1.9 1.1 4.1 1.7 6.4 1.7 7 0 12.7-5.6 12.7-12.5S23.3 3 16.3 3h-.3zm7.6 17.8c-.3.9-1.7 1.7-2.4 1.8-.6.1-1.4.1-2.2-.1-.5-.2-1.2-.4-2-.8-3.5-1.5-5.8-5-6-5.3-.2-.3-1.4-1.9-1.4-3.6s.9-2.6 1.2-3c.3-.3.7-.4 1-.4h.7c.2 0 .5 0 .8.6.3.7 1 2.4 1.1 2.6.1.2.2.4 0 .7-.1.3-.2.4-.4.6-.2.2-.4.5-.6.7-.2.2-.4.4-.2.8.2.4 1 1.6 2.1 2.6 1.4 1.3 2.6 1.7 3 1.9.4.2.6.1.8-.1.2-.2.9-1 1.1-1.4.2-.4.5-.3.8-.2.3.1 2 1 2.4 1.2.4.2.6.3.7.4.1.2.1 1-.2 1.9z"/></svg>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- INGLATERRA -->
+<div class="product-row inglaterra" data-categories="mundial" data-name="Inglaterra">
+    <div class="bg"></div>
+    <div class="left">
+        <span class="rank">7° 🏆</span>
+        <h3>INGLATERRA</h3>
+        <p class="sub">1 TÍTULO MUNDIAL</p>
+        <p class="desc">La cuna del fútbol, tradición, honor y juego directo.</p>
+        <p class="tech-note">🧵 <strong>Tecnología Dri-FIT:</strong> Control total de la transpiración corporal.</p>
+    </div>
+    <div class="center">
+        <div class="shirt-container">
+            <img class="shirt-img front-view active" src="../img/productos/inglaterra-frente.png" alt="Camiseta Inglaterra Frente" loading="lazy">
+            <img class="shirt-img back-view" src="../img/productos/inglaterra-atras.png" alt="Camiseta Inglaterra Espalda" loading="lazy">
+        </div>
+        <div class="view-controls">
+            <button class="view-btn active" onclick="changeView(this, 'front')">FRENTE</button>
+            <button class="view-btn" onclick="changeView(this, 'back')">ESPALDA</button>
+        </div>
+        <div class="fabric">
+            <div class="circle"></div>
+            <p>TELA PREMIUM<br><small>100% poliéster transpirable</small></p>
+        </div>
+    </div>
+    <div class="right">
+        <div class="discount">-30%</div>
+        <p class="old">$85.000</p>
+        <p class="price">$59.500 <span>COP</span></p>
+        <div class="sizes">
+            <button onclick="size(this,'S')">S</button>
+            <button onclick="size(this,'M')">M</button>
+            <button onclick="size(this,'L')">L</button>
+            <button onclick="size(this,'XL')">XL</button>
+        </div>
+        <p class="measure">S: 50cm x 70cm</p>
+        <div class="qty-select">
+            <span>Cantidad:</span>
+            <button onclick="changeQty(this,-1)">−</button>
+            <span class="qty-value">1</span>
+            <button onclick="changeQty(this,1)">+</button>
+        </div>
+        <button class="buy" onclick="addToCart(this)">AGREGAR AL CARRITO</button>
+
+        <div class="wa-bubble">
+            <span class="wa-tip">Personalizar por WhatsApp</span>
+            <a href="https://wa.me/573000000000?text=Hola,%20quiero%20personalizar%20la%20camiseta%20de%20Inglaterra" target="_blank" class="wa-btn" aria-label="Personalizar por WhatsApp">
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.5.7 4.8 1.9 6.8L3 29l6.9-2.1c1.9 1.1 4.1 1.7 6.4 1.7 7 0 12.7-5.6 12.7-12.5S23.3 3 16.3 3h-.3zm7.6 17.8c-.3.9-1.7 1.7-2.4 1.8-.6.1-1.4.1-2.2-.1-.5-.2-1.2-.4-2-.8-3.5-1.5-5.8-5-6-5.3-.2-.3-1.4-1.9-1.4-3.6s.9-2.6 1.2-3c.3-.3.7-.4 1-.4h.7c.2 0 .5 0 .8.6.3.7 1 2.4 1.1 2.6.1.2.2.4 0 .7-.1.3-.2.4-.4.6-.2.2-.4.5-.6.7-.2.2-.4.4-.2.8.2.4 1 1.6 2.1 2.6 1.4 1.3 2.6 1.7 3 1.9.4.2.6.1.8-.1.2-.2.9-1 1.1-1.4.2-.4.5-.3.8-.2.3.1 2 1 2.4 1.2.4.2.6.3.7.4.1.2.1 1-.2 1.9z"/></svg>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ESPAÑA -->
+<div class="product-row espana" data-categories="mundial eurocopa" data-name="España">
+    <div class="bg"></div>
+    <div class="left">
+        <span class="rank">8° 🏆</span>
+        <h3>ESPAÑA</h3>
+        <p class="sub">1 TÍTULO MUNDIAL</p>
+        <p class="desc">La Furia Roja, tiki-taka, control absoluto y magia técnica.</p>
+        <p class="tech-note">🧵 <strong>Tecnología Aeroready:</strong> Máxima transpirabilidad en cada movimiento.</p>
+    </div>
+    <div class="center">
+        <div class="shirt-container">
+            <img class="shirt-img front-view active" src="../img/productos/espana-frente.png" alt="Camiseta España Frente" loading="lazy">
+            <img class="shirt-img back-view" src="../img/productos/espana-atras.png" alt="Camiseta España Espalda" loading="lazy">
+        </div>
+        <div class="view-controls">
+            <button class="view-btn active" onclick="changeView(this, 'front')">FRENTE</button>
+            <button class="view-btn" onclick="changeView(this, 'back')">ESPALDA</button>
+        </div>
+        <div class="fabric">
+            <div class="circle"></div>
+            <p>TELA PREMIUM<br><small>Secado rápido</small></p>
+        </div>
+    </div>
+    <div class="right">
+        <div class="discount">-30%</div>
+        <p class="old">$85.000</p>
+        <p class="price">$59.500 <span>COP</span></p>
+        <div class="sizes">
+            <button onclick="size(this,'S')">S</button>
+            <button onclick="size(this,'M')">M</button>
+            <button onclick="size(this,'L')">L</button>
+            <button onclick="size(this,'XL')">XL</button>
+        </div>
+        <p class="measure">S: 50cm x 70cm</p>
+        <div class="qty-select">
+            <span>Cantidad:</span>
+            <button onclick="changeQty(this,-1)">−</button>
+            <span class="qty-value">1</span>
+            <button onclick="changeQty(this,1)">+</button>
+        </div>
+        <button class="buy" onclick="addToCart(this)">AGREGAR AL CARRITO</button>
+
+        <div class="wa-bubble">
+            <span class="wa-tip">Personalizar por WhatsApp</span>
+            <a href="https://wa.me/573000000000?text=Hola,%20quiero%20personalizar%20la%20camiseta%20de%20Espana" target="_blank" class="wa-btn" aria-label="Personalizar por WhatsApp">
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.5.7 4.8 1.9 6.8L3 29l6.9-2.1c1.9 1.1 4.1 1.7 6.4 1.7 7 0 12.7-5.6 12.7-12.5S23.3 3 16.3 3h-.3zm7.6 17.8c-.3.9-1.7 1.7-2.4 1.8-.6.1-1.4.1-2.2-.1-.5-.2-1.2-.4-2-.8-3.5-1.5-5.8-5-6-5.3-.2-.3-1.4-1.9-1.4-3.6s.9-2.6 1.2-3c.3-.3.7-.4 1-.4h.7c.2 0 .5 0 .8.6.3.7 1 2.4 1.1 2.6.1.2.2.4 0 .7-.1.3-.2.4-.4.6-.2.2-.4.5-.6.7-.2.2-.4.4-.2.8.2.4 1 1.6 2.1 2.6 1.4 1.3 2.6 1.7 3 1.9.4.2.6.1.8-.1.2-.2.9-1 1.1-1.4.2-.4.5-.3.8-.2.3.1 2 1 2.4 1.2.4.2.6.3.7.4.1.2.1 1-.2 1.9z"/></svg>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- COLOMBIA -->
+<div class="product-row colombia" data-categories="copa" data-name="Colombia">
+    <div class="bg"></div>
+    <div class="left">
+        <span class="rank">🥇 COPA AMÉRICA</span>
+        <h3>COLOMBIA</h3>
+        <p class="sub">1 TÍTULO CONTINENTAL (2001)</p>
+        <p class="desc">La tricolor cafetera: velocidad, gambeta y una hinchada que vibra en cada mundial.</p>
+        <p class="tech-note">🧵 <strong>Tecnología Climacool:</strong> Ventilación estratégica en zonas de alta transpiración.</p>
+    </div>
+    <div class="center">
+        <div class="shirt-container">
+            <img class="shirt-img front-view active" src="../img/productos/colombia-frente.png" alt="Camiseta Colombia Frente" loading="lazy">
+            <img class="shirt-img back-view" src="../img/productos/colombia-atras.png" alt="Camiseta Colombia Espalda" loading="lazy">
+        </div>
+        <div class="view-controls">
+            <button class="view-btn active" onclick="changeView(this, 'front')">FRENTE</button>
+            <button class="view-btn" onclick="changeView(this, 'back')">ESPALDA</button>
+        </div>
+        <div class="fabric">
+            <div class="circle"></div>
+            <p>TELA PREMIUM<br><small>100% poliéster transpirable</small></p>
+        </div>
+    </div>
+    <div class="right">
+        <div class="discount">-30%</div>
+        <p class="old">$85.000</p>
+        <p class="price">$59.500 <span>COP</span></p>
+        <div class="sizes">
+            <button onclick="size(this,'S')">S</button>
+            <button onclick="size(this,'M')">M</button>
+            <button onclick="size(this,'L')">L</button>
+            <button onclick="size(this,'XL')">XL</button>
+        </div>
+        <p class="measure">S: 50cm x 70cm</p>
+        <div class="qty-select">
+            <span>Cantidad:</span>
+            <button onclick="changeQty(this,-1)">−</button>
+            <span class="qty-value">1</span>
+            <button onclick="changeQty(this,1)">+</button>
+        </div>
+        <button class="buy" onclick="addToCart(this)">AGREGAR AL CARRITO</button>
+
+        <div class="wa-bubble">
+            <span class="wa-tip">Personalizar por WhatsApp</span>
+            <a href="https://wa.me/573000000000?text=Hola,%20quiero%20personalizar%20la%20camiseta%20de%20Colombia" target="_blank" class="wa-btn" aria-label="Personalizar por WhatsApp">
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.5.7 4.8 1.9 6.8L3 29l6.9-2.1c1.9 1.1 4.1 1.7 6.4 1.7 7 0 12.7-5.6 12.7-12.5S23.3 3 16.3 3h-.3zm7.6 17.8c-.3.9-1.7 1.7-2.4 1.8-.6.1-1.4.1-2.2-.1-.5-.2-1.2-.4-2-.8-3.5-1.5-5.8-5-6-5.3-.2-.3-1.4-1.9-1.4-3.6s.9-2.6 1.2-3c.3-.3.7-.4 1-.4h.7c.2 0 .5 0 .8.6.3.7 1 2.4 1.1 2.6.1.2.2.4 0 .7-.1.3-.2.4-.4.6-.2.2-.4.5-.6.7-.2.2-.4.4-.2.8.2.4 1 1.6 2.1 2.6 1.4 1.3 2.6 1.7 3 1.9.4.2.6.1.8-.1.2-.2.9-1 1.1-1.4.2-.4.5-.3.8-.2.3.1 2 1 2.4 1.2.4.2.6.3.7.4.1.2.1 1-.2 1.9z"/></svg>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ESTADOS UNIDOS -->
+<div class="product-row usa" data-categories="ninguno" data-name="Estados Unidos">
+    <div class="bg"></div>
+    <div class="left">
+        <span class="rank">🔥 EN ASCENSO</span>
+        <h3>ESTADOS UNIDOS</h3>
+        <p class="sub">SIN TÍTULOS FIFA / CONCACAF MAYOR</p>
+        <p class="desc">El fútbol que crece más rápido en el continente, anfitrión del Mundial 2026 y en plena expansión global.</p>
+        <p class="tech-note">🧵 <strong>Tecnología Vaporknit:</strong> Elasticidad multidireccional para máxima libertad de movimiento.</p>
+    </div>
+    <div class="center">
+        <div class="shirt-container">
+            <img class="shirt-img front-view active" src="../img/productos/usa-frente.png" alt="Camiseta Estados Unidos Frente" loading="lazy">
+            <img class="shirt-img back-view" src="../img/productos/usa-atras.png" alt="Camiseta Estados Unidos Espalda" loading="lazy">
+        </div>
+        <div class="view-controls">
+            <button class="view-btn active" onclick="changeView(this, 'front')">FRENTE</button>
+            <button class="view-btn" onclick="changeView(this, 'back')">ESPALDA</button>
+        </div>
+        <div class="fabric">
+            <div class="circle blue"></div>
+            <p>TELA PREMIUM<br><small>Secado rápido</small></p>
+        </div>
+    </div>
+    <div class="right">
+        <div class="discount">-30%</div>
+        <p class="old">$85.000</p>
+        <p class="price">$59.500 <span>COP</span></p>
+        <div class="sizes">
+            <button onclick="size(this,'S')">S</button>
+            <button onclick="size(this,'M')">M</button>
+            <button onclick="size(this,'L')">L</button>
+            <button onclick="size(this,'XL')">XL</button>
+        </div>
+        <p class="measure">S: 50cm x 70cm</p>
+        <div class="qty-select">
+            <span>Cantidad:</span>
+            <button onclick="changeQty(this,-1)">−</button>
+            <span class="qty-value">1</span>
+            <button onclick="changeQty(this,1)">+</button>
+        </div>
+        <button class="buy" onclick="addToCart(this)">AGREGAR AL CARRITO</button>
+
+        <div class="wa-bubble">
+            <span class="wa-tip">Personalizar por WhatsApp</span>
+            <a href="https://wa.me/573000000000?text=Hola,%20quiero%20personalizar%20la%20camiseta%20de%20Estados%20Unidos" target="_blank" class="wa-btn" aria-label="Personalizar por WhatsApp">
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.5.7 4.8 1.9 6.8L3 29l6.9-2.1c1.9 1.1 4.1 1.7 6.4 1.7 7 0 12.7-5.6 12.7-12.5S23.3 3 16.3 3h-.3zm7.6 17.8c-.3.9-1.7 1.7-2.4 1.8-.6.1-1.4.1-2.2-.1-.5-.2-1.2-.4-2-.8-3.5-1.5-5.8-5-6-5.3-.2-.3-1.4-1.9-1.4-3.6s.9-2.6 1.2-3c.3-.3.7-.4 1-.4h.7c.2 0 .5 0 .8.6.3.7 1 2.4 1.1 2.6.1.2.2.4 0 .7-.1.3-.2.4-.4.6-.2.2-.4.5-.6.7-.2.2-.4.4-.2.8.2.4 1 1.6 2.1 2.6 1.4 1.3 2.6 1.7 3 1.9.4.2.6.1.8-.1.2-.2.9-1 1.1-1.4.2-.4.5-.3.8-.2.3.1 2 1 2.4 1.2.4.2.6.3.7.4.1.2.1 1-.2 1.9z"/></svg>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- MÉXICO (nueva) -->
+<div class="product-row mexico" data-categories="ninguno" data-name="México">
+    <div class="bg"></div>
+    <div class="left">
+        <span class="rank">🔥 SIN TÍTULOS MUNDIALES</span>
+        <h3>MÉXICO</h3>
+        <p class="sub">MÁXIMO CAMPEÓN DE CONCACAF (SIN TÍTULO MUNDIAL)</p>
+        <p class="desc">El Tri: una de las hinchadas más fieles del mundo y presencia constante en los mundiales.</p>
+        <p class="tech-note">🧵 <strong>Tecnología HeatGear:</strong> Regula la temperatura corporal durante el esfuerzo intenso.</p>
+    </div>
+    <div class="center">
+        <div class="shirt-container">
+            <img class="shirt-img front-view active" src="../img/productos/mexico-frente.png" alt="Camiseta México Frente" loading="lazy">
+            <img class="shirt-img back-view" src="../img/productos/mexico-atras.png" alt="Camiseta México Espalda" loading="lazy">
+        </div>
+        <div class="view-controls">
+            <button class="view-btn active" onclick="changeView(this, 'front')">FRENTE</button>
+            <button class="view-btn" onclick="changeView(this, 'back')">ESPALDA</button>
+        </div>
+        <div class="fabric">
+            <div class="circle"></div>
+            <p>TELA PREMIUM<br><small>100% poliéster transpirable</small></p>
+        </div>
+    </div>
+    <div class="right">
+        <div class="discount">-30%</div>
+        <p class="old">$85.000</p>
+        <p class="price">$59.500 <span>COP</span></p>
+        <div class="sizes">
+            <button onclick="size(this,'S')">S</button>
+            <button onclick="size(this,'M')">M</button>
+            <button onclick="size(this,'L')">L</button>
+            <button onclick="size(this,'XL')">XL</button>
+        </div>
+        <p class="measure">S: 50cm x 70cm</p>
+        <div class="qty-select">
+            <span>Cantidad:</span>
+            <button onclick="changeQty(this,-1)">−</button>
+            <span class="qty-value">1</span>
+            <button onclick="changeQty(this,1)">+</button>
+        </div>
+        <button class="buy" onclick="addToCart(this)">AGREGAR AL CARRITO</button>
+
+        <div class="wa-bubble">
+            <span class="wa-tip">Personalizar por WhatsApp</span>
+            <a href="https://wa.me/573000000000?text=Hola,%20quiero%20personalizar%20la%20camiseta%20de%20Mexico" target="_blank" class="wa-btn" aria-label="Personalizar por WhatsApp">
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.5.7 4.8 1.9 6.8L3 29l6.9-2.1c1.9 1.1 4.1 1.7 6.4 1.7 7 0 12.7-5.6 12.7-12.5S23.3 3 16.3 3h-.3zm7.6 17.8c-.3.9-1.7 1.7-2.4 1.8-.6.1-1.4.1-2.2-.1-.5-.2-1.2-.4-2-.8-3.5-1.5-5.8-5-6-5.3-.2-.3-1.4-1.9-1.4-3.6s.9-2.6 1.2-3c.3-.3.7-.4 1-.4h.7c.2 0 .5 0 .8.6.3.7 1 2.4 1.1 2.6.1.2.2.4 0 .7-.1.3-.2.4-.4.6-.2.2-.4.5-.6.7-.2.2-.4.4-.2.8.2.4 1 1.6 2.1 2.6 1.4 1.3 2.6 1.7 3 1.9.4.2.6.1.8-.1.2-.2.9-1 1.1-1.4.2-.4.5-.3.8-.2.3.1 2 1 2.4 1.2.4.2.6.3.7.4.1.2.1 1-.2 1.9z"/></svg>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- COSTA RICA (nueva) -->
+<div class="product-row costarica" data-categories="ninguno" data-name="Costa Rica">
+    <div class="bg"></div>
+    <div class="left">
+        <span class="rank">🔥 SORPRESA MUNDIALISTA</span>
+        <h3>COSTA RICA</h3>
+        <p class="sub">CUARTOS DE FINAL BRASIL 2014 (SIN TÍTULO MUNDIAL)</p>
+        <p class="desc">La Sele: orden defensivo, garra centroamericana y una de las mayores sorpresas mundialistas de la historia.</p>
+        <p class="tech-note">🧵 <strong>Tecnología Ultraweave:</strong> Tejido ultraligero diseñado para velocidad y confort.</p>
+    </div>
+    <div class="center">
+        <div class="shirt-container">
+            <img class="shirt-img front-view active" src="../img/productos/costarica-frente.png" alt="Camiseta Costa Rica Frente" loading="lazy">
+            <img class="shirt-img back-view" src="../img/productos/costarica-atras.png" alt="Camiseta Costa Rica Espalda" loading="lazy">
+        </div>
+        <div class="view-controls">
+            <button class="view-btn active" onclick="changeView(this, 'front')">FRENTE</button>
+            <button class="view-btn" onclick="changeView(this, 'back')">ESPALDA</button>
+        </div>
+        <div class="fabric">
+            <div class="circle blue"></div>
+            <p>TELA PREMIUM<br><small>Secado rápido</small></p>
+        </div>
+    </div>
+    <div class="right">
+        <div class="discount">-30%</div>
+        <p class="old">$85.000</p>
+        <p class="price">$59.500 <span>COP</span></p>
+        <div class="sizes">
+            <button onclick="size(this,'S')">S</button>
+            <button onclick="size(this,'M')">M</button>
+            <button onclick="size(this,'L')">L</button>
+            <button onclick="size(this,'XL')">XL</button>
+        </div>
+        <p class="measure">S: 50cm x 70cm</p>
+        <div class="qty-select">
+            <span>Cantidad:</span>
+            <button onclick="changeQty(this,-1)">−</button>
+            <span class="qty-value">1</span>
+            <button onclick="changeQty(this,1)">+</button>
+        </div>
+        <button class="buy" onclick="addToCart(this)">AGREGAR AL CARRITO</button>
+
+        <div class="wa-bubble">
+            <span class="wa-tip">Personalizar por WhatsApp</span>
+            <a href="https://wa.me/573000000000?text=Hola,%20quiero%20personalizar%20la%20camiseta%20de%20Costa%20Rica" target="_blank" class="wa-btn" aria-label="Personalizar por WhatsApp">
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.5.7 4.8 1.9 6.8L3 29l6.9-2.1c1.9 1.1 4.1 1.7 6.4 1.7 7 0 12.7-5.6 12.7-12.5S23.3 3 16.3 3h-.3zm7.6 17.8c-.3.9-1.7 1.7-2.4 1.8-.6.1-1.4.1-2.2-.1-.5-.2-1.2-.4-2-.8-3.5-1.5-5.8-5-6-5.3-.2-.3-1.4-1.9-1.4-3.6s.9-2.6 1.2-3c.3-.3.7-.4 1-.4h.7c.2 0 .5 0 .8.6.3.7 1 2.4 1.1 2.6.1.2.2.4 0 .7-.1.3-.2.4-.4.6-.2.2-.4.5-.6.7-.2.2-.4.4-.2.8.2.4 1 1.6 2.1 2.6 1.4 1.3 2.6 1.7 3 1.9.4.2.6.1.8-.1.2-.2.9-1 1.1-1.4.2-.4.5-.3.8-.2.3.1 2 1 2.4 1.2.4.2.6.3.7.4.1.2.1 1-.2 1.9z"/></svg>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- CANADÁ (nueva) -->
+<div class="product-row canada" data-categories="ninguno" data-name="Canadá">
+    <div class="bg"></div>
+    <div class="left">
+        <span class="rank">🔥 EN CRECIMIENTO</span>
+        <h3>CANADÁ</h3>
+        <p class="sub">CO-ANFITRIÓN MUNDIAL 2026 (SIN TÍTULO MUNDIAL)</p>
+        <p class="desc">Los Canucks: velocidad, juventud y un fútbol en plena consolidación de cara al Mundial de casa.</p>
+        <p class="tech-note">🧵 <strong>Tecnología Dri-FIT ADV:</strong> Combina tejido antihumedad con ingeniería avanzada.</p>
+    </div>
+    <div class="center">
+        <div class="shirt-container">
+            <img class="shirt-img front-view active" src="../img/productos/canada-frente.png" alt="Camiseta Canadá Frente" loading="lazy">
+            <img class="shirt-img back-view" src="../img/productos/canada-atras.png" alt="Camiseta Canadá Espalda" loading="lazy">
+        </div>
+        <div class="view-controls">
+            <button class="view-btn active" onclick="changeView(this, 'front')">FRENTE</button>
+            <button class="view-btn" onclick="changeView(this, 'back')">ESPALDA</button>
+        </div>
+        <div class="fabric">
+            <div class="circle"></div>
+            <p>TELA PREMIUM<br><small>100% poliéster transpirable</small></p>
+        </div>
+    </div>
+    <div class="right">
+        <div class="discount">-30%</div>
+        <p class="old">$85.000</p>
+        <p class="price">$59.500 <span>COP</span></p>
+        <div class="sizes">
+            <button onclick="size(this,'S')">S</button>
+            <button onclick="size(this,'M')">M</button>
+            <button onclick="size(this,'L')">L</button>
+            <button onclick="size(this,'XL')">XL</button>
+        </div>
+        <p class="measure">S: 50cm x 70cm</p>
+        <div class="qty-select">
+            <span>Cantidad:</span>
+            <button onclick="changeQty(this,-1)">−</button>
+            <span class="qty-value">1</span>
+            <button onclick="changeQty(this,1)">+</button>
+        </div>
+        <button class="buy" onclick="addToCart(this)">AGREGAR AL CARRITO</button>
+
+        <div class="wa-bubble">
+            <span class="wa-tip">Personalizar por WhatsApp</span>
+            <a href="https://wa.me/573000000000?text=Hola,%20quiero%20personalizar%20la%20camiseta%20de%20Canada" target="_blank" class="wa-btn" aria-label="Personalizar por WhatsApp">
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.5.7 4.8 1.9 6.8L3 29l6.9-2.1c1.9 1.1 4.1 1.7 6.4 1.7 7 0 12.7-5.6 12.7-12.5S23.3 3 16.3 3h-.3zm7.6 17.8c-.3.9-1.7 1.7-2.4 1.8-.6.1-1.4.1-2.2-.1-.5-.2-1.2-.4-2-.8-3.5-1.5-5.8-5-6-5.3-.2-.3-1.4-1.9-1.4-3.6s.9-2.6 1.2-3c.3-.3.7-.4 1-.4h.7c.2 0 .5 0 .8.6.3.7 1 2.4 1.1 2.6.1.2.2.4 0 .7-.1.3-.2.4-.4.6-.2.2-.4.5-.6.7-.2.2-.4.4-.2.8.2.4 1 1.6 2.1 2.6 1.4 1.3 2.6 1.7 3 1.9.4.2.6.1.8-.1.2-.2.9-1 1.1-1.4.2-.4.5-.3.8-.2.3.1 2 1 2.4 1.2.4.2.6.3.7.4.1.2.1 1-.2 1.9z"/></svg>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- PORTUGAL -->
+<div class="product-row portugal" data-categories="eurocopa" data-name="Portugal">
+    <div class="bg"></div>
+    <div class="left">
+        <span class="rank">⭐ EUROCOPA</span>
+        <h3>PORTUGAL</h3>
+        <p class="sub">1 TÍTULO CONTINENTAL (2016)</p>
+        <p class="desc">Elegancia y talento individual de primer nivel, cuna de generaciones históricas del fútbol europeo.</p>
+        <p class="tech-note">🧵 <strong>Tecnología HeatGear:</strong> Regula la temperatura corporal durante el esfuerzo intenso.</p>
+    </div>
+    <div class="center">
+        <div class="shirt-container">
+            <img class="shirt-img front-view active" src="../img/productos/portugal-frente.png" alt="Camiseta Portugal Frente" loading="lazy">
+            <img class="shirt-img back-view" src="../img/productos/portugal-atras.png" alt="Camiseta Portugal Espalda" loading="lazy">
+        </div>
+        <div class="view-controls">
+            <button class="view-btn active" onclick="changeView(this, 'front')">FRENTE</button>
+            <button class="view-btn" onclick="changeView(this, 'back')">ESPALDA</button>
+        </div>
+        <div class="fabric">
+            <div class="circle"></div>
+            <p>TELA PREMIUM<br><small>100% poliéster transpirable</small></p>
+        </div>
+    </div>
+    <div class="right">
+        <div class="discount">-30%</div>
+        <p class="old">$85.000</p>
+        <p class="price">$59.500 <span>COP</span></p>
+        <div class="sizes">
+            <button onclick="size(this,'S')">S</button>
+            <button onclick="size(this,'M')">M</button>
+            <button onclick="size(this,'L')">L</button>
+            <button onclick="size(this,'XL')">XL</button>
+        </div>
+        <p class="measure">S: 50cm x 70cm</p>
+        <div class="qty-select">
+            <span>Cantidad:</span>
+            <button onclick="changeQty(this,-1)">−</button>
+            <span class="qty-value">1</span>
+            <button onclick="changeQty(this,1)">+</button>
+        </div>
+        <button class="buy" onclick="addToCart(this)">AGREGAR AL CARRITO</button>
+
+        <div class="wa-bubble">
+            <span class="wa-tip">Personalizar por WhatsApp</span>
+            <a href="https://wa.me/573000000000?text=Hola,%20quiero%20personalizar%20la%20camiseta%20de%20Portugal" target="_blank" class="wa-btn" aria-label="Personalizar por WhatsApp">
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.5.7 4.8 1.9 6.8L3 29l6.9-2.1c1.9 1.1 4.1 1.7 6.4 1.7 7 0 12.7-5.6 12.7-12.5S23.3 3 16.3 3h-.3zm7.6 17.8c-.3.9-1.7 1.7-2.4 1.8-.6.1-1.4.1-2.2-.1-.5-.2-1.2-.4-2-.8-3.5-1.5-5.8-5-6-5.3-.2-.3-1.4-1.9-1.4-3.6s.9-2.6 1.2-3c.3-.3.7-.4 1-.4h.7c.2 0 .5 0 .8.6.3.7 1 2.4 1.1 2.6.1.2.2.4 0 .7-.1.3-.2.4-.4.6-.2.2-.4.5-.6.7-.2.2-.4.4-.2.8.2.4 1 1.6 2.1 2.6 1.4 1.3 2.6 1.7 3 1.9.4.2.6.1.8-.1.2-.2.9-1 1.1-1.4.2-.4.5-.3.8-.2.3.1 2 1 2.4 1.2.4.2.6.3.7.4.1.2.1 1-.2 1.9z"/></svg>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- PAÍSES BAJOS -->
+<div class="product-row paisesbajos" data-categories="eurocopa" data-name="Países Bajos">
+    <div class="bg"></div>
+    <div class="left">
+        <span class="rank">⭐ EUROCOPA</span>
+        <h3>PAÍSES BAJOS</h3>
+        <p class="sub">1 TÍTULO CONTINENTAL (1988)</p>
+        <p class="desc">La "Naranja Mecánica": fútbol total, 3 finales de mundial y una escuela táctica admirada en todo el mundo.</p>
+        <p class="tech-note">🧵 <strong>Tecnología Dri-FIT:</strong> Control total de la transpiración corporal.</p>
+    </div>
+    <div class="center">
+        <div class="shirt-container">
+            <img class="shirt-img front-view active" src="../img/productos/paisesbajos-frente.png" alt="Camiseta Países Bajos Frente" loading="lazy">
+            <img class="shirt-img back-view" src="../img/productos/paisesbajos-atras.png" alt="Camiseta Países Bajos Espalda" loading="lazy">
+        </div>
+        <div class="view-controls">
+            <button class="view-btn active" onclick="changeView(this, 'front')">FRENTE</button>
+            <button class="view-btn" onclick="changeView(this, 'back')">ESPALDA</button>
+        </div>
+        <div class="fabric">
+            <div class="circle"></div>
+            <p>TELA PREMIUM<br><small>Secado rápido</small></p>
+        </div>
+    </div>
+    <div class="right">
+        <div class="discount">-30%</div>
+        <p class="old">$85.000</p>
+        <p class="price">$59.500 <span>COP</span></p>
+        <div class="sizes">
+            <button onclick="size(this,'S')">S</button>
+            <button onclick="size(this,'M')">M</button>
+            <button onclick="size(this,'L')">L</button>
+            <button onclick="size(this,'XL')">XL</button>
+        </div>
+        <p class="measure">S: 50cm x 70cm</p>
+        <div class="qty-select">
+            <span>Cantidad:</span>
+            <button onclick="changeQty(this,-1)">−</button>
+            <span class="qty-value">1</span>
+            <button onclick="changeQty(this,1)">+</button>
+        </div>
+        <button class="buy" onclick="addToCart(this)">AGREGAR AL CARRITO</button>
+
+        <div class="wa-bubble">
+            <span class="wa-tip">Personalizar por WhatsApp</span>
+            <a href="https://wa.me/573000000000?text=Hola,%20quiero%20personalizar%20la%20camiseta%20de%20Paises%20Bajos" target="_blank" class="wa-btn" aria-label="Personalizar por WhatsApp">
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.5.7 4.8 1.9 6.8L3 29l6.9-2.1c1.9 1.1 4.1 1.7 6.4 1.7 7 0 12.7-5.6 12.7-12.5S23.3 3 16.3 3h-.3zm7.6 17.8c-.3.9-1.7 1.7-2.4 1.8-.6.1-1.4.1-2.2-.1-.5-.2-1.2-.4-2-.8-3.5-1.5-5.8-5-6-5.3-.2-.3-1.4-1.9-1.4-3.6s.9-2.6 1.2-3c.3-.3.7-.4 1-.4h.7c.2 0 .5 0 .8.6.3.7 1 2.4 1.1 2.6.1.2.2.4 0 .7-.1.3-.2.4-.4.6-.2.2-.4.5-.6.7-.2.2-.4.4-.2.8.2.4 1 1.6 2.1 2.6 1.4 1.3 2.6 1.7 3 1.9.4.2.6.1.8-.1.2-.2.9-1 1.1-1.4.2-.4.5-.3.8-.2.3.1 2 1 2.4 1.2.4.2.6.3.7.4.1.2.1 1-.2 1.9z"/></svg>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- CHILE -->
+<div class="product-row chile" data-categories="copa" data-name="Chile">
+    <div class="bg"></div>
+    <div class="left">
+        <span class="rank">🥇 COPA AMÉRICA</span>
+        <h3>CHILE</h3>
+        <p class="sub">2 TÍTULOS CONTINENTALES (2015, 2016)</p>
+        <p class="desc">La Roja: intensidad, presión alta y el bicampeonato continental más reciente de Sudamérica.</p>
+        <p class="tech-note">🧵 <strong>Tecnología Climacool:</strong> Ventilación estratégica en zonas de alta transpiración.</p>
+    </div>
+    <div class="center">
+        <div class="shirt-container">
+            <img class="shirt-img front-view active" src="../img/productos/chile-frente.png" alt="Camiseta Chile Frente" loading="lazy">
+            <img class="shirt-img back-view" src="../img/productos/chile-atras.png" alt="Camiseta Chile Espalda" loading="lazy">
+        </div>
+        <div class="view-controls">
+            <button class="view-btn active" onclick="changeView(this, 'front')">FRENTE</button>
+            <button class="view-btn" onclick="changeView(this, 'back')">ESPALDA</button>
+        </div>
+        <div class="fabric">
+            <div class="circle"></div>
+            <p>TELA PREMIUM<br><small>100% poliéster transpirable</small></p>
+        </div>
+    </div>
+    <div class="right">
+        <div class="discount">-30%</div>
+        <p class="old">$85.000</p>
+        <p class="price">$59.500 <span>COP</span></p>
+        <div class="sizes">
+            <button onclick="size(this,'S')">S</button>
+            <button onclick="size(this,'M')">M</button>
+            <button onclick="size(this,'L')">L</button>
+            <button onclick="size(this,'XL')">XL</button>
+        </div>
+        <p class="measure">S: 50cm x 70cm</p>
+        <div class="qty-select">
+            <span>Cantidad:</span>
+            <button onclick="changeQty(this,-1)">−</button>
+            <span class="qty-value">1</span>
+            <button onclick="changeQty(this,1)">+</button>
+        </div>
+        <button class="buy" onclick="addToCart(this)">AGREGAR AL CARRITO</button>
+
+        <div class="wa-bubble">
+            <span class="wa-tip">Personalizar por WhatsApp</span>
+            <a href="https://wa.me/573000000000?text=Hola,%20quiero%20personalizar%20la%20camiseta%20de%20Chile" target="_blank" class="wa-btn" aria-label="Personalizar por WhatsApp">
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.5.7 4.8 1.9 6.8L3 29l6.9-2.1c1.9 1.1 4.1 1.7 6.4 1.7 7 0 12.7-5.6 12.7-12.5S23.3 3 16.3 3h-.3zm7.6 17.8c-.3.9-1.7 1.7-2.4 1.8-.6.1-1.4.1-2.2-.1-.5-.2-1.2-.4-2-.8-3.5-1.5-5.8-5-6-5.3-.2-.3-1.4-1.9-1.4-3.6s.9-2.6 1.2-3c.3-.3.7-.4 1-.4h.7c.2 0 .5 0 .8.6.3.7 1 2.4 1.1 2.6.1.2.2.4 0 .7-.1.3-.2.4-.4.6-.2.2-.4.5-.6.7-.2.2-.4.4-.2.8.2.4 1 1.6 2.1 2.6 1.4 1.3 2.6 1.7 3 1.9.4.2.6.1.8-.1.2-.2.9-1 1.1-1.4.2-.4.5-.3.8-.2.3.1 2 1 2.4 1.2.4.2.6.3.7.4.1.2.1 1-.2 1.9z"/></svg>
+            </a>
+        </div>
+    </div>
+</div>
+
+</div><!-- /productsGrid -->
+
+</section>
+
+<!-- CARRITO FLOTANTE -->
+<div class="cart-overlay" id="cartOverlay">
+    <div class="cart-panel">
+        <div class="cart-header">
+            <h3>Tu Carrito</h3>
+            <button class="cart-close" onclick="closeCart()" aria-label="Cerrar carrito">✕</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="cart-empty">Tu carrito está vacío 🛒</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total"><span>Total</span><span id="cartTotal">$0 COP</span></div>
+            <button class="cart-checkout-btn" onclick="checkout()">FINALIZAR COMPRA</button>
+        </div>
+    </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- MODAL DE AGRADECIMIENTO -->
+<div class="thanks-overlay" id="thanksOverlay">
+    <div class="thanks-box">
+        <div class="check">✅</div>
+        <h3>¡Gracias por tu compra!</h3>
+        <p>Estás siendo redirigido para completar un último formulario…</p>
+        <div class="thanks-bar"><div class="thanks-bar-fill"></div></div>
+    </div>
+</div>
+
+
+<script src="../js/productos.js"></script>
+
+</body>
+</html>

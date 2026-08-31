@@ -1,0 +1,252 @@
+/* --- CONFIGURACIÓN BASE --- */
+body { background-color: #0a0a0f; margin: 0; }
+.font-heading { font-family: 'Bebas Neue', sans-serif; }
+.font-body { font-family: 'DM Sans', sans-serif; }
+
+/* --- MODAL BIENVENIDA CON FONDO JAMES.PNG --- */
+.modal-welcome-overlay {
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed; inset: 0;
+}
+.modal-welcome-overlay::before {
+    content: "";
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url('../img/comunes/estadio.jpg');
+    background-size: cover; background-position: center top;
+    filter: brightness(0.3) contrast(1.1); z-index: -1;
+}
+/* --- EFECTO CLEAN GLASS PREMIUM --- */
+.glass-morphism {
+    background: rgba(255, 255, 255, 0.03) !important;
+    backdrop-filter: blur(15px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(15px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37) !important;
+}
+
+.header-glass {
+    background: rgba(10, 10, 15, 0.7) !important;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Validación visual */
+input:focus {
+    border-color: #FCD116 !important;
+    box-shadow: 0 0 15px rgba(252, 209, 22, 0.2);
+}
+#gender-modal.hidden { display: none; }
+
+/* --- FONDOS PÁGINA PRINCIPAL (ESTADIO.JPG) --- */
+.custom-bg-image {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -2;
+    background-image: url('../img/comunes/estadio.jpg'); 
+    background-size: cover; background-position: center;
+    filter: brightness(0.15); transform: scale(1.1);
+    animation: bgPan 30s linear infinite alternate;
+}
+
+@keyframes bgPan {
+    from { transform: scale(1.1) translate(0,0); }
+    to { transform: scale(1.1) translate(-2%, -2%); }
+}
+
+.tricolor-bg {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+    background: linear-gradient(135deg, rgba(0,56,147,0.1) 0%, rgba(206,17,38,0.05) 50%, rgba(252,209,22,0.05) 100%);
+    background-size: 400% 400%;
+    animation: gradMove 10s ease infinite;
+}
+
+@keyframes gradMove { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+
+/* --- PRECIOS Y DESCUENTOS --- */
+.line-through {
+    text-decoration: line-through;
+    text-decoration-color: #CE1126;
+    text-decoration-thickness: 2px;
+}
+
+/* --- ESTILO SELECTOR GÉNERO PRENDA --- */
+.item-gender-active-masc {
+    border-color: #FCD116 !important;
+    background: rgba(252, 209, 22, 0.1) !important;
+    color: #FCD116 !important;
+}
+.item-gender-active-fem {
+    border-color: #CE1126 !important;
+    background: rgba(206, 17, 38, 0.1) !important;
+    color: #CE1126 !important;
+}
+
+/* --- TARJETAS JERSEY --- */
+.card-jersey {
+    background: rgba(26, 26, 36, 0.75);
+    backdrop-filter: blur(12px);
+    border-radius: 1.5rem; padding: 1.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    position: relative; cursor: zoom-in;
+    transition: all 0.4s ease;
+}
+.card-jersey:hover {
+    border-color: #003893;
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 56, 147, 0.4);
+}
+.img-product { width: 100%; height: 100%; object-fit: contain; transition: 0.5s ease; }
+
+.size-btn {
+    width: 3.5rem; height: 3rem; border-radius: 0.8rem;
+    border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+.size-btn.active {
+    background: #FCD116; color: black; border-color: #FCD116;
+    font-weight: 800; transform: translateY(-4px);
+}
+footer {
+    position: relative;
+    z-index: 20;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5);
+}
+
+input:invalid {
+    border-color: #CE1126; /* Color rojo si el formato HTML5 no se cumple */
+}
+
+.col-gradient { background: linear-gradient(135deg, #FCD116, #003893, #CE1126); }
+.whatsapp-pulse { animation: pulseW 2s infinite; }
+@keyframes pulseW { 0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.4); } 70% { box-shadow: 0 0 0 20px rgba(37,211,102,0); } 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); } }
+.animate-pop { animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+@keyframes popIn { from { transform: scale(0.85); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+/* --- CATÁLOGO COMPLETO DE SELECCIONES --- */
+.team-card {
+    background: rgba(26, 26, 36, 0.75);
+    backdrop-filter: blur(12px);
+    border-radius: 1.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+    opacity: 0;
+    transform: translateY(28px);
+}
+.team-card.in-view {
+    animation: cardReveal 0.6s ease forwards;
+}
+@keyframes cardReveal {
+    to { opacity: 1; transform: translateY(0); }
+}
+.team-card:hover {
+    border-color: #FCD116;
+    transform: translateY(-6px);
+    box-shadow: 0 18px 34px rgba(0,0,0,0.45);
+}
+.team-card-imgwrap {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    background: radial-gradient(circle at 50% 20%, rgba(255,255,255,0.06), transparent 70%);
+    cursor: pointer;
+    overflow: hidden;
+}
+.team-card-img {
+    object-fit: contain;
+    padding: 10px;
+    opacity: 1;
+}
+.team-card-imgwrap:hover .team-card-img {
+    transform: scale(1.05);
+}
+.team-zoom-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.55);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 999px;
+    color: #FCD116;
+    cursor: pointer;
+    z-index: 5;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+.team-zoom-btn:hover {
+    background: #FCD116;
+    color: #0a0a0f;
+    transform: scale(1.1);
+}
+.team-flag-badge {
+    position: absolute; top: 10px; left: 10px;
+    font-size: 1.4rem;
+    background: rgba(0,0,0,0.45);
+    border-radius: 999px;
+    width: 34px; height: 34px;
+    display: flex; align-items: center; justify-content: center;
+    backdrop-filter: blur(4px);
+}
+.team-discount-badge {
+    position: absolute; top: 10px; right: 10px;
+    background: #CE1126; color: #fff; font-weight: 800;
+    font-size: 0.75rem; padding: 4px 8px; border-radius: 999px;
+}
+.team-flip-hint {
+    position: absolute; bottom: 8px; right: 8px;
+    font-size: 0.65rem; color: rgba(255,255,255,0.6);
+    background: rgba(0,0,0,0.4); padding: 3px 8px; border-radius: 999px;
+    display: flex; align-items: center; gap: 4px;
+    pointer-events: none;
+}
+.team-size-btn {
+    width: 2.35rem; height: 2.15rem; font-size: 0.75rem; border-radius: 0.6rem;
+    border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.4);
+    color: #fff; transition: 0.2s;
+}
+.team-size-btn.active {
+    background: #FCD116; color: #000; border-color: #FCD116;
+    font-weight: 800; transform: translateY(-2px);
+}
+.team-qty-btn {
+    width: 2rem; height: 2rem; border-radius: 0.5rem;
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15);
+    color: #fff;
+}
+.team-details {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.65);
+}
+.team-details summary {
+    cursor: pointer;
+    color: #FCD116;
+    font-weight: 700;
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    list-style: none;
+}
+.team-details summary::-webkit-details-marker { display: none; }
+.team-details[open] summary { margin-bottom: 6px; }
+.team-add-btn {
+    width: 100%;
+    background: #FCD116; color: #000; font-weight: 800;
+    padding: 10px 0; border-radius: 0.9rem;
+    transition: 0.25s;
+    font-size: 0.85rem;
+}
+.team-add-btn:hover {
+    background: #003893; color: #fff;
+}
+.team-stock {
+    font-size: 0.7rem;
+    color: #25D366;
+    font-weight: 700;
+}
+.catalog-filter-bar select,
+.catalog-filter-bar input {
+    background: #0a0a0f;
+    border: 1px solid rgba(255,255,255,0.15);
+    color: #fff;
+}

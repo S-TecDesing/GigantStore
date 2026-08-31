@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Las Camisetas de los Gigantes</title>
+    <!-- Fuentes e Iconos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/principal.css">
+</head>
+<body>
+
+    <!-- Header / Barra de Navegación -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="#inicio">⚽ Gigantes<span>Store</span></a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Quiénes Somos</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#envios">Envíos & Experiencias</a></li>
+                <li><a href="#rastreo">Rastrear Pedido</a></li>
+                <li>
+                    <a href="https://wa.me/573001234567?text=Hola,%20deseo%20más%20información%20sobre%20las%20camisetas" target="_blank" class="btn-whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i> Contacto
+                    </a>
+                </li>
+                <li>
+                    <a class="cart-icon-btn" href="productos.html" aria-label="Ir al carrito de compras">
+                        🛒
+                        <span class="cart-badge" id="cartBadge">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección Principal (Inicio) -->
+    <section id="inicio" class="hero-section">
+        <div class="hero-content">
+            <span class="badge-promo">Edición Especial 2026</span>
+            <h1 class="main-title">Las camisetas de los gigantes</h1>
+            <p class="subtitle">Lleva la pasión, la historia y la gloria de los mejores equipos del mundo con la máxima calidad.</p>
+            <div class="hero-actions">
+                <a href="productos.html" class="btn-cta">Ver Colección</a>
+                <a href="#envios" class="btn-secondary">Testimonios</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Quiénes Somos -->
+    <section id="nosotros" class="section-container">
+        <h2 class="section-title">Quiénes Somos</h2>
+        <div class="about-card">
+            <div class="about-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div class="about-text">
+                <p>
+                    En <strong>Las Camisetas de los Gigantes</strong> somos apasionados por el fútbol y los detalles. Nos especializamos en indumentarias deportivas de alta gama, réplicas exactas y piezas históricas, garantizando acabados profesionales, telas transpirables y una experiencia de compra segura y confiable.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Catálogo -->
+        <section id="catalogo" class="section-container">
+        <h2 class="section-title">Colección Destacada</h2>
+        <p class="section-subtitle premium-subtitle">
+            A diferencia de nuestro catálogo por mayor con precio de unidad y descuento, la <strong>Colección Destacada</strong>
+            es nuestra línea Edición Jugador: telas de mayor gramaje, estampados 100% originales termosellados y
+            <strong>garantía extendida de cambio</strong> si la talla no es la correcta. Ideal si buscas la máxima calidad para tu colección.
+        </p>
+        <div class="product-grid">
+            <div class="product-card premium-card">
+                <div class="card-badge">Top Ventas</div>
+                <div class="card-images">
+                    <img src="../img/productos/brasil-frente.png" alt="Camiseta Brasil Frente" class="img-front">
+                    <img src="../img/productos/brasil-atras.png" alt="Camiseta Brasil Atrás" class="img-back">
+                </div>
+                <span class="premium-tag"><i class="fa-solid fa-shield-halved"></i> 100% Original · Garantizada</span>
+                <h3>Camiseta Selección Brasil</h3>
+                <p class="product-desc">Versión Jugador · Edición Oficial 2026</p>
+                <p class="price">$189.900 COP</p>
+                <a href="https://wa.me/573001234567?text=Hola,%20quiero%20comprar%20la%20Camiseta%20Edici%C3%B3n%20Jugador%20de%20Brasil" target="_blank" class="btn-buy">Comprar Ahora</a>
+            </div>
+
+            <div class="product-card premium-card">
+                <div class="card-badge">Edición Limitada</div>
+                <div class="card-images">
+                    <img src="../img/productos/argentina-frente.png" alt="Camiseta Argentina Frente" class="img-front">
+                    <img src="../img/productos/argentina-atras.png" alt="Camiseta Argentina Atrás" class="img-back">
+                </div>
+                <span class="premium-tag"><i class="fa-solid fa-shield-halved"></i> 100% Original · Garantizada</span>
+                <h3>Camiseta Selección Argentina</h3>
+                <p class="product-desc">Versión Jugador · Edición Oficial 2026</p>
+                <p class="price">$189.900 COP</p>
+                <a href="https://wa.me/573001234567?text=Hola,%20quiero%20comprar%20la%20Camiseta%20Edici%C3%B3n%20Jugador%20de%20Argentina" target="_blank" class="btn-buy">Comprar Ahora</a>
+            </div>
+
+            <div class="product-card premium-card">
+                <div class="card-badge">Favorita Local</div>
+                <div class="card-images">
+                    <img src="../img/productos/colombia-frente.png" alt="Camiseta Colombia Frente" class="img-front">
+                    <img src="../img/productos/colombia-atras.png" alt="Camiseta Colombia Atrás" class="img-back">
+                </div>
+                <span class="premium-tag"><i class="fa-solid fa-shield-halved"></i> 100% Original · Garantizada</span>
+                <h3>Camiseta Selección Colombia</h3>
+                <p class="product-desc">Versión Jugador · Edición Oficial 2026</p>
+                <p class="price">$189.900 COP</p>
+                <a href="https://wa.me/573001234567?text=Hola,%20quiero%20comprar%20la%20Camiseta%20Edici%C3%B3n%20Jugador%20de%20Colombia" target="_blank" class="btn-buy">Comprar Ahora</a>
+            </div>
+        </div>
+        <p class="text-center-link"><a href="productos.html">Ver también el catálogo completo por mayor con descuento →</a></p>
+    </section>
+
+    <!-- Sección Rastrea tu Pedido -->
+    <section id="rastreo" class="section-container">
+        <h2 class="section-title">Rastrea tu Pedido</h2>
+        <p class="section-subtitle">Ingresa tu número de guía y tu cédula (los mismos que usaste al finalizar tu compra) para ver en qué ciudad va tu pedido.</p>
+
+        <div class="tracking-box">
+            <form id="tracking-form" class="tracking-form" onsubmit="return false;">
+                <input type="text" id="track-guia" placeholder="Número de guía (Ej: CMC-000123-A2F9)" autocomplete="off">
+                <input type="text" id="track-cedula" placeholder="Número de cédula" inputmode="numeric" autocomplete="off">
+                <button type="button" id="track-btn" onclick="rastrearPedido()">
+                    <i class="fa-solid fa-magnifying-glass-location"></i> Rastrear
+                </button>
+            </form>
+
+            <p id="tracking-error" class="tracking-error hidden"></p>
+
+            <div id="tracking-result" class="tracking-result hidden">
+                <div class="tracking-summary">
+                    <div>
+                        <span class="tracking-label">Guía</span>
+                        <strong id="tr-guia">-</strong>
+                    </div>
+                    <div>
+                        <span class="tracking-label">Estado actual</span>
+                        <strong id="tr-estado" class="tracking-estado">-</strong>
+                    </div>
+                    <div>
+                        <span class="tracking-label">Ciudad actual</span>
+                        <strong id="tr-ciudad">-</strong>
+                    </div>
+                    <div>
+                        <span class="tracking-label">Destino final</span>
+                        <strong id="tr-destino">-</strong>
+                    </div>
+                </div>
+
+                <ol id="tracking-timeline" class="tracking-timeline"></ol>
+
+                <div class="tracking-items">
+                    <h4>Contenido del pedido</h4>
+                    <table class="tracking-items-table">
+                        <thead>
+                            <tr><th>Camiseta</th><th>Talla</th><th>Cant.</th><th>Precio</th></tr>
+                        </thead>
+                        <tbody id="tr-items-body"></tbody>
+                    </table>
+                    <p class="tracking-total">Total del pedido: <strong id="tr-total">$0 COP</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Envíos y Reseñas con Slider Continuo -->
+    <section id="envios" class="section-container reviews-section">
+        <h2 class="section-title">Envíos & Experiencias</h2>
+        <p class="section-subtitle">Lo que dicen los fanáticos de todo el continente sobre nuestros envíos y productos.</p>
+        
+        <!-- Carrusel Slider Animado -->
+        <div class="slider-container">
+            <div class="slider-track">
+                
+                <!-- Set Original (5 Reseñas con Nombre y País) -->
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="comment">"El envío llegó en 2 días a Bogotá. La tela, el escudo termosellado y los detalles son una locura de calidad."</p>
+                    <div class="author-info">
+                        <span class="author-name">Carlos Mendoza</span>
+                        <span class="author-country">🇨🇴 Colombia</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="comment">"Excelente servicio internacional. El número de guía siempre estuvo activo y el paquete llegó en perfecto estado."</p>
+                    <div class="author-info">
+                        <span class="author-name">Matías Silva</span>
+                        <span class="author-country">🇦🇷 Argentina</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="comment">"Atención al cliente de 10 por WhatsApp. Me asesoraron perfectamente con la talla antes de despachar."</p>
+                    <div class="author-info">
+                        <span class="author-name">Diego Fernández</span>
+                        <span class="author-country">🇲🇽 México</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <p class="comment">"Compré dos camisetas y el tiempo de entrega fue súper rápido. Sin duda volveré a encargar para mi colección."</p>
+                    <div class="author-info">
+                        <span class="author-name">Javier Morales</span>
+                        <span class="author-country">🇨🇱 Chile</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="comment">"Calidad premium garantizada. Los estampados resisten los lavados sin desgastarse. Totalmente recomendados."</p>
+                    <div class="author-info">
+                        <span class="author-name">Sebastián Castillo</span>
+                        <span class="author-country">🇵🇪 Perú</span>
+                    </div>
+                </div>
+
+                <!-- Set Duplicado (Para efecto de Loop Infinito Continuo) -->
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="comment">"El envío llegó en 2 días a Bogotá. La tela, el escudo termosellado y los detalles son una locura de calidad."</p>
+                    <div class="author-info">
+                        <span class="author-name">Carlos Mendoza</span>
+                        <span class="author-country">🇨🇴 Colombia</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="comment">"Excelente servicio internacional. El número de guía siempre estuvo activo y el paquete llegó en perfecto estado."</p>
+                    <div class="author-info">
+                        <span class="author-name">Matías Silva</span>
+                        <span class="author-country">🇦🇷 Argentina</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="comment">"Atención al cliente de 10 por WhatsApp. Me asesoraron perfectamente con la talla antes de despachar."</p>
+                    <div class="author-info">
+                        <span class="author-name">Diego Fernández</span>
+                        <span class="author-country">🇲🇽 México</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <p class="comment">"Compré dos camisetas y el tiempo de entrega fue súper rápido. Sin duda volveré a encargar para mi colección."</p>
+                    <div class="author-info">
+                        <span class="author-name">Javier Morales</span>
+                        <span class="author-country">🇨🇱 Chile</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="comment">"Calidad premium garantizada. Los estampados resisten los lavados sin desgastarse. Totalmente recomendados."</p>
+                    <div class="author-info">
+                        <span class="author-name">Sebastián Castillo</span>
+                        <span class="author-country">🇵🇪 Perú</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Pie de página -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-contact">
+                <h4>Contacto Directo</h4>
+                <p>
+                    <a href="https://wa.me/573001234567?text=Hola,%20deseo%20más%20información%20sobre%20las%20camisetas" target="_blank" class="footer-wa-link">
+                        <i class="fa-brands fa-whatsapp"></i> WhatsApp: +57 300 123 4567
+                    </a>
+                </p>
+            </div>
+            <div class="footer-copy">
+                <span class="copyright">&copy; 2026 Las Camisetas de los Gigantes. Todos los derechos reservados.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/index.js"></script>
+</body>
+</html>

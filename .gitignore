@@ -1,0 +1,11 @@
+# Nunca subir las claves reales del chatbot
+py/.env
+
+# Entorno virtual de Python (se recrea en el servidor, no se sube)
+py/venv/
+py/__pycache__/
+*.pyc
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
